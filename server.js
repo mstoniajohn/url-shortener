@@ -5,6 +5,7 @@ require('dotenv').config();
 // const ShortUrl = require('./models/shortUrl');
 const methodOverride = require('method-override');
 var compression = require('compression');
+var helmet = require('helmet');
 const morgan = require('morgan');
 // const ignoreFavicon = require('./middleware/ignoreFavicon');
 const path = require('path');
@@ -22,6 +23,8 @@ const connectDB = require('./config/db');
 // 	useUnifiedTopology: true,
 // 	useCreateIndex: true,
 // });
+
+app.use(helmet());
 app.use(compression()); //Compress all routes
 
 connectDB();
