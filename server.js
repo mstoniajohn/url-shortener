@@ -9,9 +9,9 @@ const path = require('path');
 const PORT = process.env.PORT || 5001;
 const app = express();
 
-const Article = require('./models/Article');
-const articleRouter = require('./routes/articles');
-const urlRouter = require('./routes/urls');
+const Article = require('./models/Article.js');
+const articleRouter = require('./routes/articles.js');
+const urlRouter = require('./routes/urls.js');
 
 const connectDB = require('./config/db');
 
