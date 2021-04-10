@@ -1,0 +1,40 @@
+<div class="container my-5">
+	<div class="form-group">
+		<label class="h2" for="title">Title</label>
+		<input
+			class="form-control"
+			type="text"
+			id="title"
+			name="title"
+			required
+			value="<%= article.title %>"
+		/>
+	</div>
+	<div class="form-group">
+		<label class="h4" for="description">Description</label>
+		<textarea
+			class="form-control"
+			name="description"
+			id="description"
+			cols="30"
+			rows="10"
+		>
+	<%= article.description %></textarea
+		>
+	</div>
+	<div class="my-2 form-group">
+		<label class="h4" for="markdown">Markdown</label>
+		<textarea
+			class="form-control"
+			name="markdown"
+			id="markdown"
+			cols="30"
+			rows="10"
+			required
+		>
+	<%= article.markdown %></textarea
+		>
+	</div>
+	<a class="btn btn-danger" href="/">cancel</a>
+	<button class="btn btn-success" type="submit">save</button>
+</div>

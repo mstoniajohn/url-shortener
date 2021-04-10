@@ -1,0 +1,6 @@
+{
+	"mongoURI": "mongodb+srv://admin:JesusReigns7@cluster0.oys2g.mongodb.net/posts?retryWrites=true&w=majority",
+	"jwtSecret": "prettysecrettoken",
+	"githubClientId": "69b17c642a684039389f",
+	"githubSecret": "a46d0c43b641d65a00fe94877e1195c947cd9721"
+}

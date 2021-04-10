@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form action="/users" method="POST">
+			<div class="container my-5">
+				<div class="form-group">
+					<label class="h2" for="title">name</label>
+					<input
+						class="form-control"
+						type="text"
+						id="name"
+						name="name"
+						required
+						value="<%= user.name %>"
+					/>
+				</div>
+				<div class="form-group">
+					<label class="h4" for="email">email</label>
+					<input
+						class="form-control"
+						name="email"
+						id="email"
+						required
+						value="<%= user.email %>"
+					/>
+				</div>
+				<div class="my-2 form-group">
+					<label class="h4" for="password">password</label>
+					<input class="form-control" name="password" id="password" required />
+				</div>
+				<a class="btn btn-danger" href="/">cancel</a>
+				<button class="btn btn-success" type="submit">save</button>
+			</div>
+		</form>
+	</body>
+</html>
