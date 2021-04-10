@@ -38,9 +38,9 @@ app.use(express.static('public'));
 
 // app.use(express.static(path.join(__dirname, 'static')));
 // middleware
-app.use((req, res, next) => {
-	next();
-});
+// app.use((req, res, next) => {
+// 	next();
+// });
 app.get('/', async (req, res) => {
 	const articles = await Article.find().sort({ date: 'desc' });
 
