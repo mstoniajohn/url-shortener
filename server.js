@@ -3,15 +3,17 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 // const ShortUrl = require('./models/shortUrl');
 const methodOverride = require('method-override');
+
+const morgan = require('morgan');
 // const ignoreFavicon = require('./middleware/ignoreFavicon');
 const bodyParser = require('body-parser');
 const path = require('path');
 const PORT = process.env.PORT || 5001;
 const app = express();
 
-const Article = require('./models/Article.js');
-const articleRouter = require('./routes/articles.js');
-const urlRouter = require('./routes/urls.js');
+const Article = require('./models/Article');
+const articleRouter = require('./routes/articles');
+const urlRouter = require('./routes/urls');
 
 const connectDB = require('./config/db');
 
