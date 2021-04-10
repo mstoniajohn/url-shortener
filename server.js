@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 // const ShortUrl = require('./models/shortUrl');
 const methodOverride = require('method-override');
-const ignoreFavicon = require('./middleware/ignoreFavicon');
+// const ignoreFavicon = require('./middleware/ignoreFavicon');
 const bodyParser = require('body-parser');
 const path = require('path');
 const PORT = process.env.PORT || 5001;
@@ -32,12 +32,10 @@ app.use(methodOverride('_method'));
 app.use(express.json({ extended: false }));
 
 app.use(express.static('public'));
-app.use(ignoreFavicon);
+// app.use(ignoreFavicon);
 
 // app.use(express.static(path.join(__dirname, 'static')));
 // middleware
-
-app.get('/favicon.ico', (req, res) => res.status(204));
 
 app.get('/', async (req, res) => {
 	const articles = await Article.find().sort({ date: 'desc' });
