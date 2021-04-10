@@ -34,7 +34,7 @@ app.use(morgan('combined'));
 app.use(express.static('public'));
 // app.use(ignoreFavicon);
 
-// app.use(express.static(path.join(__dirname, 'static')));
+app.use(express.static(path.join(__dirname, 'static')));
 // middleware
 // app.use((req, res, next) => {
 // 	next();
@@ -44,7 +44,7 @@ app.get('/', async (req, res) => {
 
 	res.render('articles/index', { title: 'Hi', articles: articles });
 });
-app.use('/articles', articleRouter);
+app.use('/', articleRouter);
 app.use('/shortUrls', urlRouter);
 app.use('/auth', require('./routes/auth'));
 app.use('/users', require('./routes/user'));
