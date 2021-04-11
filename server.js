@@ -15,14 +15,7 @@ const articleRouter = require('./routes/articles');
 const urlRouter = require('./routes/urls');
 const connectDB = require('./config/db');
 
-// const favicon = require('serve-favicon');
 
-// mongodb+srv://admin:${process.env.DB_CONNECTION}@cluster0.oys2g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-// mongoose.connect(`${process.env.DATABASE}`, {
-// 	useNewUrlParser: true,
-// 	useUnifiedTopology: true,
-// 	useCreateIndex: true,
-// });
 
 app.use(helmet());
 app.use(compression()); //Compress all routes
@@ -52,9 +45,6 @@ app.use('/shortUrls', urlRouter);
 app.use('/auth', require('./routes/auth'));
 app.use('/users', require('./routes/user'));
 
-// app.get('/shortUrls', async (req, res) => {
-// 	const urls = await ShortUrl.find();
-// 	res.render('urls', { urls: urls });
-// });
+
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
